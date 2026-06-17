@@ -5,22 +5,18 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-
 <div class="container">
     <h1>Spam Email Classifier 📧</h1>
-
     <form action="/predict" method="post">
         <textarea name="message" placeholder="Enter your message here..." required>{{ original_message or '' }}</textarea>
         <br>
         <button type="submit">Check</button>
     </form>
-
     {% if prediction_text %}
         <div class="result">
             <h2>{{ prediction_text }}</h2>
         </div>
     {% endif %}
 </div>
-
 </body>
 </html>
