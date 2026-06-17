@@ -10,7 +10,7 @@
     <h1>Spam Email Classifier 📧</h1>
 
     <form action="/predict" method="post">
-        <textarea name="message" placeholder="Enter your message here..." required></textarea>
+        <textarea name="message" placeholder="Enter your message here..." required>{{ original_message or '' }}</textarea>
         <br>
         <button type="submit">Check</button>
     </form>
